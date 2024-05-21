@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <nav class="bg-black border-white-200 border-opacity-25">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!--Icon when menu is closed.Menu open: "hidden", Menu closed: "block"-->
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+                Icon when menu is open.
+
+                Menu open: "block", Menu closed: "hidden"
+              -->
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+              alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="sacercade.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                aria-current="page">Acerca De</a>
+              <a href="scontacto.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contactos</a>
+              <a href="sblog.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Blog</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button"
+            class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">View notifications</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+            </svg>
+          </button>
+
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+            <div>
+              <button type="button"
+                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">Abrir Menú de Usuario</span>
+                <img class="h-8 w-8 rounded-full"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="">
+              </button>
+            </div>
+            <!--
+                Dropdown menu, show/hide based on menu state.
+
+                Entering: "transition ease-out duration-100"
+                  From: "transform opacity-0 scale-95"
+                  To: "transform opacity-100 scale-100"
+                Leaving: "transition ease-in duration-75"
+                  From: "transform opacity-100 scale-100"
+                  To: "transform opacity-0 scale-95"
+              -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+      <div class="flex">
+        <div class="pt-1 mr-6 text-center">
+          <div class="px-2 pb-1 mb-1 border-b border-gray-400">
+            <p class="text-sm text-blue-gray-700">Feb</p>
+          </div>
+          <div class="px-2">
+            <p class="text-lg font-bold">18</p>
+          </div>
+        </div>
+        <div>
+          <div class="mb-2">
+            <a href="/"
+              class="text-xs font-semibold tracking-wide uppercase transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+              aria-label="Category" title="Delevopment">JAVA</a>
+          </div>
+          <div class="mb-2">
+            <a href="/" aria-label="Article"
+              class="inline-block text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Futuro
+              de Java</a>
+          </div>
+          <p class="mb-5 text-gray-700">
+            El futuro para Java es prometedor ya que es un lenguaje utilizado por muchas personas y las ventajas pueden
+            ser mayores. Por lo tanto, a pesar de sus características negativas, Java es un lenguaje viable para
+            desarrollar aplicaciones tanto móviles como web.
+          </p>
+          <div class="flex items-center">
+            <a href="/" aria-label="Author" title="Author" class="mr-3">
+              <img
+                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+            </a>
+            <div>
+              <a href="/" aria-label="Author" title="Author"
+                class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Pablo
+                Vîrtuos</a>
+              <p class="text-sm font-medium leading-4 text-gray-600">Empleado de Delfino.cr</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="pt-1 mr-6 text-center">
+          <div class="px-2 pb-1 mb-1 border-b border-gray-400">
+            <p class="text-sm text-blue-gray-700">Mar</p>
+          </div>
+          <div class="px-2">
+            <p class="text-lg font-bold">6</p>
+          </div>
+        </div>
+        <div>
+          <div class="mb-2">
+            <a href="/"
+              class="text-xs font-semibold tracking-wide uppercase transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+              aria-label="Category" title="Food &amp; Snacks">HTML &amp; CSS</a>
+          </div>
+          <div class="mb-2">
+            <a href="/" aria-label="Article"
+              class="inline-block text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Novedades
+              y
+              cambios en HTML</a>
+          </div>
+          <p class="mb-5 text-gray-700">
+            Este nuevo estándar no tiene una cantidad asombrosa de novedades, pero las que tiene son absolutamente
+            revolucionarias. La más destacada es la posibilidad de añadir archivos multimedia a la web, como vídeos o
+            audios, y que estos no tengas que insertarlos utilizando otros plug-ins.
+          </p>
+          <div class="flex items-center">
+            <a href="/" aria-label="Author" title="Author" class="mr-3">
+              <img
+                src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+            </a>
+            <div>
+              <a href="/" aria-label="Author" title="Author"
+                class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Thomas
+                Stratulat</a>
+              <p class="text-sm font-medium leading-4 text-gray-600">CEO de Xataka</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="pt-1 mr-6 text-center">
+          <div class="px-2 pb-1 mb-1 border-b border-gray-400">
+            <p class="text-sm text-blue-gray-700">May</p>
+          </div>
+          <div class="px-2">
+            <p class="text-lg font-bold">01</p>
+          </div>
+        </div>
+        <div>
+          <div class="mb-2">
+            <a href="/"
+              class="text-xs font-semibold tracking-wide uppercase transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+              aria-label="Category" title="Out of this world">Novedades de HTML y CSS</a>
+          </div>
+          <div class="mb-2">
+            <a href="/" aria-label="Article"
+              class="inline-block text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">El
+              verdadero
+              significado de CSS</a>
+          </div>
+          <p class="mb-5 text-gray-700">
+            De esta manera, estamos ante un lenguaje de marcado que sirve para estructurar elementos de la página, como
+            enlaces, tablas, párrafos, títulos, videos e imágenes. CSS: Proviene de “Cascading Style Sheet”.
+          </p>
+          <div class="flex items-center">
+            <a href="/" aria-label="Author" title="Author" class="mr-3">
+              <img
+                src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+                alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
+            </a>
+            <div>
+              <a href="/" aria-label="Author" title="Author"
+                class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Susie
+                Cataluña</a>
+              <p class="text-sm font-medium leading-4 text-gray-600">Estudiante de Software</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer>
+    <div class="bg-blue-950">
+      <svg class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400"
+        preserveAspectRatio="none" viewBox="0 0 1440 54">
+        <path fill="currentColor"
+          d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z">
+        </path>
+      </svg>
+      <div class="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
+          <div class="md:max-w-md lg:col-span-2">
+            <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
+              <img width="45" height="45" src="https://img.icons8.com/nolan/32/circuit.png" alt="circuit" />
+              <span class="ml-2 text-xl font-bold tracking-wide text-green-500 uppercase">CODE</span>
+              <span class="ml-2 text-xl font-bold tracking-wide text-black-400 uppercase">LEARN</span>
+            </a>
+            <div class="mt-4 lg:max-w-sm">
+              <p class="text-sm text-deep-purple-50 text-white">
+                Nuestro sitio web fue creado con la finalidad de que
+                muchos usuarios puedan acceder a nuestra información
+                util, para emplearla en crear paginas web innovadoras.
+              </p>
+              <p class="mt-4 text-sm text-deep-purple-50 text-white">
+                Es apto para los iniciados y nuevos como para los más
+                avanzados y profesionales, cualquier persona puede
+                crear su sitio web si emplea los materiales
+                correctos.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+            <div>
+              <p class="font-semibold tracking-wide text-teal-accent-400 text-green-400">
+                Categorias
+              </p>
+              <ul class="mt-2 space-y-2">
+                <li>
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Mundo</a>
+                </li>
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Referencias</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="font-semibold tracking-wide text-teal-accent-400 text-green-400">Material</p>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Videos</a>
+                </li>
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Educacion</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
+          <p class="text-sm text-white">
+            © Copyright 2024 Kitwind. Todos los derechos reservados.
+          </p>
+          <div class="flex items-center mt-4 space-x-4 sm:mt-0">
+            <a href="/" class="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
