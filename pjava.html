@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <nav class="bg-black border-white-200 border-opacity-25">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!--Icon when menu is closed.Menu open: "hidden", Menu closed: "block"-->
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+                Icon when menu is open.
+
+                Menu open: "block", Menu closed: "hidden"
+              -->
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+              alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="sacercade.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                aria-current="page">Acerca De</a>
+              <a href="scontacto.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contactos</a>
+              <a href="sblog.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Blog</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button"
+            class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">View notifications</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+            </svg>
+          </button>
+
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+            <div>
+              <button type="button"
+                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">Abrir Menú de Usuario</span>
+                <img class="h-8 w-8 rounded-full"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="">
+              </button>
+            </div>
+            <!--
+                Dropdown menu, show/hide based on menu state.
+
+                Entering: "transition ease-out duration-100"
+                  From: "transform opacity-0 scale-95"
+                  To: "transform opacity-100 scale-100"
+                Leaving: "transition ease-in duration-75"
+                  From: "transform opacity-100 scale-100"
+                  To: "transform opacity-0 scale-95"
+              -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="relative px-4 pt-16 mx-auto lg:py-32 md:px-8 xl:px-20 sm:max-w-xl md:max-w-full">
+    <div class="max-w-xl mx-auto lg:max-w-screen-xl">
+      <div class="mb-16 lg:max-w-lg lg:mb-0">
+        <div class="max-w-xl mb-6">
+          <div>
+            <p
+              class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+              Reciente
+            </p>
+          </div>
+          <h2
+            class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            JAVA, lenguaje fundamental <br class="hidden md:block" />
+            para la programación
+            <span class="inline-block text-deep-purple-accent-400">y la lógica</span>
+          </h2>
+          <p class="text-base text-gray-700 md:text-lg">
+            Java es una plataforma informática de lenguaje de programación creada por Sun Microsystems en 1995. Ha
+            evolucionado desde sus humildes comienzos hasta impulsar una gran parte del mundo digital actual, ya que es
+            una plataforma fiable en la que se crean muchos servicios y aplicaciones.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-center h-full overflow-hidden lg:w-2/3 xl:w-1/2 lg:absolute lg:justify-start lg:bottom-0 lg:right-0 lg:items-end">
+      <img
+        src="data:image/jpeg;base64,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"
+        class="object-cover object-top w-full h-64 max-w-xl -mb-16 rounded shadow-2xl lg:ml-64 xl:ml-8 lg:-mb-24 xl:-mb-28 lg:h-auto lg:max-w-screen-md"
+        alt="" />
+    </div>
+  </div>
+
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid gap-8 row-gap-5 sm:row-gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div>
+        <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
+          <img width="54" height="54"
+            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4.png"
+            alt="external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4" />
+        </div>
+        <h6 class="mb-2 font-semibold leading-5">Logica y JAVA</h6>
+        <p class="mb-3 text-sm text-gray-900">
+          En esta sección te mostraran como pensar como un programador, ademas de enseñarte
+          los primeros pasos en el lenguaje de programacion JAVA.
+        </p>
+        <a href="https://jdoc-lp-three.vercel.app/course/contents/semana2" aria-label=""
+          class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">EMPEZAR</a>
+      </div>
+      <div>
+        <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
+          <img width="54" height="54"
+            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4.png"
+            alt="external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4" />
+        </div>
+        <h6 class="mb-2 font-semibold leading-5">Conversión de Datos</h6>
+        <p class="mb-3 text-sm text-gray-900">
+          En esta sección te mostraran como convertir de un tipo de dato a otro, ademas de
+          enseñarte los primeros pasos en el lenguaje de programacion JAVA.
+        </p>
+        <a href="https://jdoc-lp-three.vercel.app/course/contents/semana3" aria-label=""
+          class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">EMPEZAR</a>
+      </div>
+      <div>
+        <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
+          <img width="54" height="54"
+            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4.png"
+            alt="external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4" />
+        </div>
+        <h6 class="mb-2 font-semibold leading-5">Clase "String"</h6>
+        <p class="mb-3 text-sm text-gray-900">
+          En esta sección te mostraran como usar la clase "String" en JAVA, ademas de
+          sus diferentes funciones y formas de usar.
+        </p>
+        <a href="https://jdoc-lp-three.vercel.app/course/contents/semana4" aria-label=""
+          class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">EMPEZAR</a>
+      </div>
+      <div>
+        <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
+          <img width="54" height="54"
+            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4.png"
+            alt="external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4" />
+        </div>
+        <h6 class="mb-2 font-semibold leading-5">"Arrays"</h6>
+        <p class="mb-3 text-sm text-gray-900">
+          En estas secciones te mostraran como usar los "Arrays" en JAVA, que son
+          y como se declaran, ademas de sus diferentes funciones y formas de usar.
+        </p>
+        <a href="https://jdoc-lp-three.vercel.app/course/contents/semana5" aria-label=""
+          class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">EMPEZAR</a>
+      </div>
+      <div>
+        <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
+          <img width="54" height="54"
+            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4.png"
+            alt="external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4" />
+        </div>
+        <h6 class="mb-2 font-semibold leading-5">Estructuras de Control</h6>
+        <p class="mb-3 text-sm text-gray-900">
+          En esta sección, te mostraran como usar las estructuras de control en JAVA, cuales
+          son sus diferencias entre si y como usarlos en diferentes casos.
+        </p>
+        <a href="https://jdoc-lp-three.vercel.app/course/contents/semana7" aria-label=""
+          class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">EMPEZAR:
+          Parte 1</a>
+        <a href="https://jdoc-lp-three.vercel.app/course/contents/semana8" aria-label=""
+          class="items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
+          EMPEZAR: Parte 2</a>
+      </div>
+      <div>
+        <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
+          <img width="54" height="54"
+            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4.png"
+            alt="external-java-mobile-app-development-flaticons-lineal-color-flat-icons-4" />
+        </div>
+        <h6 class="mb-2 font-semibold leading-5">Ciclos Anidados</h6>
+        <p class="mb-3 text-sm text-gray-900">
+          En esta sección, aprenderas a usar los ciclos anidados en JAVA, que son y como usarlos en diferentes casos.
+        </p>
+        <a href="https://jdoc-lp-three.vercel.app/course/contents/semana9" aria-label=""
+          class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">EMPEZAR</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="bg-blue-950">
+      <svg class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400"
+        preserveAspectRatio="none" viewBox="0 0 1440 54">
+        <path fill="currentColor"
+          d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z">
+        </path>
+      </svg>
+      <div class="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
+          <div class="md:max-w-md lg:col-span-2">
+            <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
+              <img width="45" height="45" src="https://img.icons8.com/nolan/32/circuit.png" alt="circuit" />
+              <span class="ml-2 text-xl font-bold tracking-wide text-green-500 uppercase">CODE</span>
+              <span class="ml-2 text-xl font-bold tracking-wide text-black-400 uppercase">LEARN</span>
+            </a>
+            <div class="mt-4 lg:max-w-sm">
+              <p class="text-sm text-deep-purple-50 text-white">
+                Nuestro sitio web fue creado con la finalidad de que
+                muchos usuarios puedan acceder a nuestra información
+                util, para emplearla en crear paginas web innovadoras.
+              </p>
+              <p class="mt-4 text-sm text-deep-purple-50 text-white">
+                Es apto para los iniciados y nuevos como para los más
+                avanzados y profesionales, cualquier persona puede
+                crear su sitio web si emplea los materiales
+                correctos.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+            <div>
+              <p class="font-semibold tracking-wide text-teal-accent-400 text-green-400">
+                Categorias
+              </p>
+              <ul class="mt-2 space-y-2">
+                <li>
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Mundo</a>
+                </li>
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Referencias</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="font-semibold tracking-wide text-teal-accent-400 text-green-400">Material</p>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Videos</a>
+                </li>
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Educacion</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
+          <p class="text-sm text-white">
+            © Copyright 2024 Kitwind. Todos los derechos reservados.
+          </p>
+          <div class="flex items-center mt-4 space-x-4 sm:mt-0">
+            <a href="/" class="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
