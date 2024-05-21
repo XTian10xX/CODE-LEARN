@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <nav class="bg-black border-white-200 border-opacity-25">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!--Icon when menu is closed.Menu open: "hidden", Menu closed: "block"-->
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+                Icon when menu is open.
+
+                Menu open: "block", Menu closed: "hidden"
+              -->
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+              alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="sacercade.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                aria-current="page">Acerca De</a>
+              <a href="scontacto.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contactos</a>
+              <a href="sblog.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Blog</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button"
+            class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">View notifications</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+            </svg>
+          </button>
+
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+            <div>
+              <button type="button"
+                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">Abrir Menú de Usuario</span>
+                <img class="h-8 w-8 rounded-full"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="">
+              </button>
+            </div>
+            <!--
+                Dropdown menu, show/hide based on menu state.
+
+                Entering: "transition ease-out duration-100"
+                  From: "transform opacity-0 scale-95"
+                  To: "transform opacity-100 scale-100"
+                Leaving: "transition ease-in duration-75"
+                  From: "transform opacity-100 scale-100"
+                  To: "transform opacity-0 scale-95"
+              -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid gap-12 row-gap-8 lg:grid-cols-2">
+      <div class="flex flex-col justify-center">
+        <div class="max-w-xl mb-6">
+          <h2
+            class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            Nuestra razon de brindar <br class="hidden md:block" />
+            este conocimiento al mundo
+            <span class="inline-block text-deep-purple-accent-400">entero</span>
+          </h2>
+          <p class="text-base text-gray-700 md:text-lg">
+            Esta pagina web fue creada con mucho esfuerzo para brindar a muchos usuarios, quien estan
+            interesados en el proceso de aprender a programar, aprender a crear paginas web y
+            tener oportunidades laborales.
+          </p>
+        </div>
+        <div class="grid gap-8 row-gap-8 sm:grid-cols-2">
+          <div>
+            <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+              <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+                <img width="54" height="54"
+                  src="https://edigital.cesde.edu.co/pluginfile.php/222502/user/icon/ecesde/f3?rev=653464" alt="">
+              </div>
+            </div>
+            <h6 class="mb-2 font-semibold leading-5">
+              Jhon Fredy Valencia Goméz
+            </h6>
+            <p class="text-sm text-gray-900">
+              Profesor experto en el ambito del Software, con más de 7 años de experiencia en el área.
+              Junto con su equipo, hicieron esta pagina web posible.
+            </p>
+          </div>
+          <div>
+            <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+              <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </div>
+            <h6 class="mb-2 font-semibold leading-5">
+              Nuestra misión y visión
+            </h6>
+            <p class="text-sm text-gray-900">
+              Fomentar el aprendizaje de los estudiantes y el desarrollo de habilidades técnicas
+              en el ambito tecnológico para el futuro.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDqWar5PPGY_cQjugzs8Bw77YAmEQdG81Zew&usqp=CAU"
+          alt="" />
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="bg-blue-950">
+      <svg class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400"
+        preserveAspectRatio="none" viewBox="0 0 1440 54">
+        <path fill="currentColor"
+          d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z">
+        </path>
+      </svg>
+      <div class="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
+          <div class="md:max-w-md lg:col-span-2">
+            <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
+              <img width="45" height="45" src="https://img.icons8.com/nolan/32/circuit.png" alt="circuit" />
+              <span class="ml-2 text-xl font-bold tracking-wide text-green-500 uppercase">CODE</span>
+              <span class="ml-2 text-xl font-bold tracking-wide text-black-400 uppercase">LEARN</span>
+            </a>
+            <div class="mt-4 lg:max-w-sm">
+              <p class="text-sm text-deep-purple-50 text-white">
+                Nuestro sitio web fue creado con la finalidad de que
+                muchos usuarios puedan acceder a nuestra información
+                util, para emplearla en crear paginas web innovadoras.
+              </p>
+              <p class="mt-4 text-sm text-deep-purple-50 text-white">
+                Es apto para los iniciados y nuevos como para los más
+                avanzados y profesionales, cualquier persona puede
+                crear su sitio web si emplea los materiales
+                correctos.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+            <div>
+              <p class="font-semibold tracking-wide text-teal-accent-400 text-green-400">
+                Categorias
+              </p>
+              <ul class="mt-2 space-y-2">
+                <li>
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Mundo</a>
+                </li>
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Referencias</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="font-semibold tracking-wide text-teal-accent-400 text-green-400">Material</p>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Videos</a>
+                </li>
+                <li>
+                  <a href="/"
+                    class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Educacion</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
+          <p class="text-sm text-white">
+            © Copyright 2024 Kitwind. Todos los derechos reservados.
+          </p>
+          <div class="flex items-center mt-4 space-x-4 sm:mt-0">
+            <a href="/" class="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
